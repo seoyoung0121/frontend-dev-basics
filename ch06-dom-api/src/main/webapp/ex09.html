@@ -3,6 +3,23 @@
 <head>
 	<title>ex09</title>
 	<meta charset="UTF-8">
+	<script>
+		window.onload=function(){
+			setTimeout(function(){
+				// setAttribute/getAttribute
+				// 표준 속성 접근에 사용도 가능하지만
+				// 비표준 속성에 대해 쓰기/읽기 위해 사용한다.
+				var imgElement = document.createElement('img');
+				imgElement.setAttribute('src', '/ch06/chipanddale1.jpeg');
+				imgElement.setAttribute('alt','다람쥐 기여어');
+				imgElement.setAttribute('title', '루피 만세');
+				imgElement.setAttribute('style','width:200px');
+				imgElement.setAttribute('no',10); //비표준 속성을 사용할 때는 prefix "data-"를 달아 사용한다. data-no
+				
+				document.body.appendChild(imgElement);
+			}, 3000);
+		}
+	</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
