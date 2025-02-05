@@ -7,7 +7,7 @@
 		window.addEventListener("load", function(){
 			document
 				.getElementById('form-login')
-				.addEventListener('submit', function(){
+				.addEventListener('submit', function(event){
 					event.preventDefault();
 					var email = document.getElementById('input-email').value;
 					if(email===''){
